@@ -58,7 +58,7 @@ module.exports.connections = {
   ***************************************************************************/
    myMongo: {
     adapter: 'sails-mongo',
-     host: 'ds011775.mlab.com:11775/userauth',
+     host: 'ds011775.mlab.com',
      port: 11775,
      user: 'admin', //optional
     password: 'admin', //optional
