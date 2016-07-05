@@ -89,11 +89,29 @@ module.exports = {
                     return res.notFound();
                 },
                 success: function () {
-                    //req.session.me = user.id;
+                    req.session.me = user.id;
                     console.log('Successss');
                     return res.ok();
                 }
             })
+
+        })
+    },
+    
+    
+    logout: function (req,res) {
+        User.findOne({id:req.session.me}, function (err,user) {
+            if(err){
+                return res.negotiate(err);
+            }
+
+            if(!user){
+                return res.notFound();
+            }
+
+            req.session.me = null;
+
+            return res.redirect('/');
 
         })
     }
