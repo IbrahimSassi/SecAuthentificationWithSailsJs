@@ -60,8 +60,8 @@ module.exports.connections = {
     adapter: 'sails-mongo',
      host: 'ds011775.mlab.com',
      port: 11775,
-     user: 'admin', //optional
-    password: 'admin', //optional
+     user: '****', //optional
+    password: '****', //optional
     database: 'userauth' //optional
   }
 
